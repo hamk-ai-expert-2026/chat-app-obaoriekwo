@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multi-Model Chat</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Multi-Model Chat</h1>
+      <div class="controls">
+        <label for="model">Model</label>
+        <select id="model" disabled>
+          <option>Loading…</option>
+        </select>
+        <button id="clear" type="button" class="secondary">Clear chat</button>
+      </div>
+    </header>
+
+    <main id="messages" aria-live="polite">
+      <p class="empty">Pick a model and say hello.</p>
+    </main>
+
+    <form id="chat-form">
+      <textarea id="input" rows="2" placeholder="Type a message… (Enter to send, Shift+Enter for a new line)" required></textarea>
+      <button id="send" type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
